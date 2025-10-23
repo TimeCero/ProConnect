@@ -74,6 +74,13 @@ class _HomeScreenState extends State<HomeScreen> {
               iconTheme: IconThemeData(color: Colors.white),
               actions: [
                 IconButton(
+                  icon: Icon(Icons.calendar_today),
+                  onPressed: () {
+                    Navigator.pushNamed(context, '/my-reservations');
+                  },
+                  tooltip: 'Mis Consultas',
+                ),
+                IconButton(
                   icon: Icon(Icons.logout),
                   onPressed: () async {
                     await auth.logout();
