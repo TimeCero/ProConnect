@@ -40,15 +40,20 @@ class AppTheme {
         ),
       ),
 
-      // Botones
+      // Botones principales (Naranja)
       elevatedButtonTheme: ElevatedButtonThemeData(
         style: ElevatedButton.styleFrom(
+          backgroundColor: AppColors.accent,
+          foregroundColor: Colors.white,
           shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(12),
+            borderRadius: BorderRadius.circular(8),
           ),
-          padding: EdgeInsets.symmetric(vertical: 14),
-          textStyle: TextStyle(fontWeight: FontWeight.w600),
-          elevation: 2,
+          padding: EdgeInsets.symmetric(horizontal: 16, vertical: 14),
+          textStyle: TextStyle(
+            fontWeight: FontWeight.w600,
+            fontSize: 16,
+          ),
+          elevation: 3,
         ),
       ),
 

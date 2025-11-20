@@ -2,12 +2,16 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'services/auth_service.dart';
 import 'services/reservation_service.dart';
+import 'services/profession_service.dart';
+import 'services/profile_service.dart';
 import 'screens/login_screen.dart';
 import 'screens/register_screen.dart';
 import 'screens/home_screen.dart';
 import 'screens/reservation_screen.dart';
 import 'screens/my_reservations_screen.dart';
 import 'screens/write_review_screen.dart';
+import 'screens/professional_registration_screen.dart';
+import 'screens/profile_screen.dart';
 
 import 'theme/app_theme.dart';
 
@@ -18,6 +22,8 @@ void main() {
       providers: [
         ChangeNotifierProvider(create: (_) => AuthService()),
         ChangeNotifierProvider(create: (_) => ReservationService()),
+        ChangeNotifierProvider(create: (_) => ProfessionService()),
+        ChangeNotifierProvider(create: (_) => ProfileService()),
       ],
       child: MyApp(),
     ),
@@ -67,6 +73,8 @@ class MyApp extends StatelessWidget {
         ReservationScreen.routeName: (_) => ReservationScreen(),
         MyReservationsScreen.routeName: (_) => MyReservationsScreen(),
         WriteReviewScreen.routeName: (_) => WriteReviewScreen(),
+        ProfessionalRegistrationScreen.routeName: (_) => ProfessionalRegistrationScreen(),
+        ProfileScreen.routeName: (_) => ProfileScreen(),
       },
     );
   }

@@ -74,6 +74,20 @@ class _HomeScreenState extends State<HomeScreen> {
               iconTheme: IconThemeData(color: Colors.white),
               actions: [
                 IconButton(
+                  icon: Icon(Icons.person),
+                  onPressed: () {
+                    Navigator.pushNamed(context, '/profile');
+                  },
+                  tooltip: 'Mi Perfil',
+                ),
+                IconButton(
+                  icon: Icon(Icons.work),
+                  onPressed: () {
+                    Navigator.pushNamed(context, '/professional-registration');
+                  },
+                  tooltip: 'Registrarse como Profesional',
+                ),
+                IconButton(
                   icon: Icon(Icons.calendar_today),
                   onPressed: () {
                     Navigator.pushNamed(context, '/my-reservations');
